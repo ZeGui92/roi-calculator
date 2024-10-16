@@ -1,0 +1,233 @@
+/* Estilo Global */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: rgba(239, 239, 239, 0.31);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+.col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 10px;
+}
+
+.col-4 {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 10px;
+}
+
+.col-8 {
+    flex: 0 0 66.66%;
+    max-width: 66.66%;
+    padding: 10px;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.label {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #151313;
+    margin-bottom: 5px;
+}
+
+.description {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    color: #848484;
+    margin-bottom: 10px;
+}
+
+.select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #F2BD2A;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+/* Estilos para os Range Inputs */
+.input-range {
+    width: 100%;
+    margin-top: 5px;
+    -webkit-appearance: none;
+    height: 8px;
+    background: #D9D9D9;
+    border-radius: 5px;
+    outline: none;
+}
+
+.input-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #F2BD2A;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.input-range::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background-color: #F2BD2A;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Valor do Range abaixo do seletor */
+.range-value {
+    text-align: center;
+    font-size: 14px;
+    color: #151313;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+/* Range preenchido antes do thumb */
+.input-range::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #F2BD2A 0%, #F2BD2A var(--range-value), #D9D9D9 var(--range-value), #D9D9D9 100%);
+}
+.input-range::-moz-range-progress {
+    background-color: #F2BD2A;
+}
+.input-range::-moz-range-track {
+    background-color: #D9D9D9;
+}
+
+.highlight {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.toggle-switch {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.toggle-option {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0;
+    transition: background-color 0.3s;
+}
+
+.toggle-option.active {
+    background-color: #F2BD2A;
+    color: #fff;
+    border: 1px solid #F2BD2A;
+}
+
+.lead-generation {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.highlighted-value {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	padding: 30px;
+	color: white;
+}
+
+.highlight .row .col-6 {
+	padding: 10px;
+	color: white;
+}
+
+.main-value {
+    color: #F2BD2A;
+}
+
+.year-value {
+    color: rgba(242, 189, 42, 0.29);
+}
+
+.stat-number {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    color: #151313;
+}
+
+.stat-description {
+    color: #848484;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+}
+
+.model-description {
+	color: #B1B1B1;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .col-6, .col-4, .col-8 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+

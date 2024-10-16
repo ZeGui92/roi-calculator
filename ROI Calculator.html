@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROI Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Título principal -->
+        <div class="row">
+            <div class="col-12">
+                <h1>Return on Investment (ROI) Calculator</h1>
+            </div>
+        </div>
+
+        <!-- Subtítulo explicativo -->
+        <div class="row">
+            <div class="col-12">
+                <p class="subtitle">To get a better understanding of what your cost and return on investment (ROI) would be depending on your industry, successful conversions, and budget, check out the calculator below.</p>
+            </div>
+        </div>
+
+        <!-- Seção de seleção e sliders -->
+        <div class="row">
+            <!-- Seção esquerda com sliders e seletores -->
+            <div class="col-8">
+                <div class="row">
+                    <!-- "Your industry" coluna -->
+                    <div class="col-6">
+                        <div class="label">Your industry</div>
+                        <p class="description">Choose your industry, or pick Average if you can’t find it.</p>
+                        <select class="select">
+                            <option>Select Industry</option>
+                            <option>Technology</option>
+                            <option>Finance</option>
+                            <option>Healthcare</option>
+                            <option>Education</option>
+                            <option>Real Estate</option>
+                            <option>Manufacturing</option>
+                            <option>Retail</option>
+                            <option>Consulting</option>
+                            <option>Transportation</option>
+                            <option>Hospitality</option>
+                            <option>Average</option>
+                        </select>
+                    </div>
+
+                    <!-- "Average Deal Size" coluna -->
+                    <div class="col-6">
+                        <div class="label">Average Deal Size, $</div>
+                        <p class="description">Choose the average size of your deals.</p>
+                        <input type="range" class="input-range" min="500" max="20000" value="500" oninput="updateRangeValue(this)">
+                        <span class="range-value">500</span>
+                    </div>
+
+                    <!-- "Number of B2B prospects" coluna -->
+                    <div class="col-6">
+                        <div class="label">Number of B2B prospects</div>
+                        <p class="description">Choose the number of prospects you want to engage each month.</p>
+                        <input type="range" class="input-range" min="50" max="1000" value="50" oninput="updateRangeValue(this)">
+                        <span class="range-value">50</span>
+                    </div>
+
+                    <!-- "Close Ratio" coluna -->
+                    <div class="col-6">
+                        <div class="label">Close Ratio (after appointment) %</div>
+                        <p class="description">To calculate this number, divide the number of sales you made by the number of quotes you sent out.</p>
+                        <input type="range" class="input-range" min="1" max="50" value="1" oninput="updateRangeValue(this)">
+                        <span class="range-value">1</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seção direita com resultado e opções B2B/B2C -->
+            <div class="col-4">
+                <div class="highlight">
+                    <!-- Toggle switch (exibição estática) -->
+                    <div class="toggle-switch">
+                        <label class="toggle-option active">B2B</label>
+                        <label class="toggle-option">B2C</label>
+                    </div>
+                    <p class="lead-generation">B2B lead generation that sees your business through</p>
+                    <div class="highlighted-value">
+                        <span class="main-value">$324,000</span>
+                        <span class="year-value">/ Year</span>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="stat-number" style="color: #F2BD2A;">9</div>
+                            <p class="stat-description">Approx. number of appointments booked / monthly</p>
+                        </div>
+                        <div class="col-6">
+                            <div class="stat-number" style="color: #F2BD2A;">959%</div>
+                            <p class="stat-description">Return on marketing investment</p>
+                        </div>
+                    </div>
+					 <div class="row">
+                        <div class="col-12">                            
+                            <p class="model-description">Each model offers flexible pricing to fit your lead generation needs and stay within the limits of your budget.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
